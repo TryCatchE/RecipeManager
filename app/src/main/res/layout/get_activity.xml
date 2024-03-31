@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/header_layout"
+        android:id="@+id/header"/>
+
+    <!-- Image view for the recipe -->
+    <ImageView
+        android:id="@+id/recipeImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/header"
+        android:scaleType="centerCrop"/>
+
+    <!-- Main ingredients -->
+    <TextView
+        android:id="@+id/mainIngredientsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recipeImageView"
+        android:layout_marginTop="16dp"
+        android:text="Main Ingredients"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"/>
+
+    <!-- GridView for displaying main ingredients -->
+    <GridView
+        android:id="@+id/mainIngredientsGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainIngredientsTextView"
+        android:layout_marginTop="8dp"
+        android:numColumns="2"
+        android:columnWidth="150dp"
+        android:horizontalSpacing="8dp"
+        android:verticalSpacing="8dp"/>
+
+    <!-- Recipe Description -->
+    <TextView
+        android:id="@+id/recipeDescriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainIngredientsGridView"
+        android:layout_marginTop="16dp"
+        android:text="Recipe Description"
+        android:textSize="18sp"
+        android:padding="16dp"/>
+
+    <!-- Footer with buttons -->
+    <LinearLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+
+    </LinearLayout>
+
+</RelativeLayout>

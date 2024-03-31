@@ -1,0 +1,122 @@
+<!-- activity_create_recipe.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footerLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <include
+                layout="@layout/header_layout"
+                android:id="@+id/header"/>
+
+            <!-- Recipe Title -->
+            <EditText
+                android:id="@+id/editTextTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Recipe Title"
+                android:inputType="text"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/edit_text_border"/>
+
+            <!-- Image Placeholder -->
+            <ImageView
+                android:id="@+id/imagePlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerInside"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Ingredients Section -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"> <!-- Adjusted height -->
+
+                <TextView
+                    android:id="@+id/textViewIngredients"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ingredients"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true" />
+
+                <!-- Modified buttonAddIngredient -->
+                <Button
+                    android:id="@+id/buttonAddIngredient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginStart="-1dp"
+                    android:background="@null"
+                    android:text="+"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    android:padding="2dp"
+                    android:backgroundTint="@android:color/holo_blue_dark"/> <!-- Adjusted padding -->
+
+            </RelativeLayout>
+
+            <!-- Ingredient Input Fields -->
+            <LinearLayout
+                android:id="@+id/ingredientsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Recipe Description -->
+            <EditText
+                android:id="@+id/editTextDescription"
+                android:layout_width="match_parent"
+                android:layout_height="116dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="start"
+                android:hint="Recipe Description"
+                android:minLines="3"
+                android:background="@drawable/edit_text_border" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/imgBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Upload Image"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:text="Save"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

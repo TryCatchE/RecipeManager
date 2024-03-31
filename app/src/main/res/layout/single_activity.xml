@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footerLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                layout="@layout/header_layout"
+                android:id="@+id/header"/>
+
+            <!-- Image view for the recipe -->
+            <ImageView
+                android:id="@+id/recipeImageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerInside"
+                android:layout_below="@id/header" />
+
+            <!-- Main ingredients -->
+            <TextView
+                android:id="@+id/mainIngredientsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recipeImageView"
+                android:layout_marginTop="16dp"
+                android:text="Main Ingredients"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+
+            <!-- List of main ingredients -->
+            <TextView
+                android:id="@+id/mainIngredientsListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mainIngredientsTextView"
+                android:layout_marginTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceListItem"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+
+            <!-- Recipe Description -->
+            <TextView
+                android:id="@+id/recipeDescriptionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mainIngredientsListView"
+                android:layout_marginTop="16dp"
+                android:text="Recipe Description"
+                android:textSize="18sp"
+                android:padding="16dp"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <!-- Footer with buttons -->
+    <LinearLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Delete"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:text="Edit"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+
+</RelativeLayout>
