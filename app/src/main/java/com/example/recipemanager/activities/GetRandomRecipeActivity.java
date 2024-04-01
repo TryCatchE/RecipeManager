@@ -12,7 +12,6 @@ public class GetRandomRecipeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_activity);
         HeaderUtil.setupHeader(this, "Get a random recipe", R.id.titleTextView, R.id.backButton, true);
-
     }
 }
 

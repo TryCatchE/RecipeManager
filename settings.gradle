@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "QrCode"
+rootProject.name = "Recipe Manager"
 include ':app'

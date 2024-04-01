@@ -49,6 +49,12 @@ public class QrActivity extends AppCompatActivity {
             String contents = intentResult.getContents();
             if(contents !=null){
                 text.setText(intentResult.getContents());
+
+                Intent intent = new Intent(QrActivity.this, HttpActivity.class);
+                intent.putExtra("qr_contents", contents);
+                String url = "http://10.0.2.2:8080/api/recipe/" + contents;
+                intent.putExtra("url", url);
+                startActivity(intent);
             }
         }else{
             super.onActivityResult(requestCode,resultCode,data);

@@ -42,6 +42,11 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
+    //Qr Code
+
     implementation 'com.google.zxing:core:3.4.1'
     implementation 'com.journeyapps:zxing-android-embedded:4.2.0'
+
+    // Http
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.2'
 }

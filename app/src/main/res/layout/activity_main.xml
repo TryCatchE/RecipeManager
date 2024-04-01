@@ -6,48 +6,55 @@
     android:background="#F0F0F0"
     tools:context=".MainActivity">
 
-    <include
-        layout="@layout/header_layout"
-        android:id="@+id/header"/>
+    <!-- Add a background color -->
+    <RelativeLayout
+        android:id="@+id/backgroundLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@android:color/holo_orange_light">
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Get a random recipe"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
-        android:backgroundTint="@android:color/holo_blue_dark"/>
+        <!-- Add your logo in an ImageView -->
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Create a recipe"
-        android:layout_above="@id/button1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="@android:color/holo_blue_dark"/>
+        <!-- Your buttons layout -->
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="0dp"
+            android:src="@drawable/logo" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="View your recipes"
-        android:layout_above="@id/button2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="@android:color/holo_blue_dark"/>
+        <include layout="@layout/header_layout" android:id="@+id/header"/>
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add a recipe using QR Code"
-        android:layout_above="@id/button3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="@android:color/holo_blue_dark"/>
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginBottom="42dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:text="QR Code Scanner" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create a recipe"
+            android:layout_above="@id/button3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@android:color/holo_blue_dark"/>
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View your recipes"
+            android:layout_above="@id/button1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@android:color/holo_blue_dark"/>
+    </RelativeLayout>
 
 </RelativeLayout>

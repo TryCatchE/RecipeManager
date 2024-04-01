@@ -15,10 +15,11 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="91dp"
-        android:layout_marginEnd="58dp"
-        android:text="QR Scanner" />
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="64dp"
+        android:text="QR Scanner"
+        android:backgroundTint="@android:color/holo_blue_dark"/>
 
     <TextView
         android:id="@+id/text"
